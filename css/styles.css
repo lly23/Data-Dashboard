@@ -1,9 +1,14 @@
 html, body {
-
+    margin: 0;
+    padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
 
+}
+
+.italics {
+    font-style: italic;
 }
 
 /* supports checks whether the user browswer supports this */
@@ -14,12 +19,23 @@ h1, h2, h3, h4, h5, h6 {
         "header header header"
         "main main main"
         "footer footer footer";
-        grid-template-rows: 150px auto 100px;
+        grid-template-rows: 100px auto 100px;
         grid-template-columns: 15% auto 15%;
     }
 
     .header {
         grid-area: header;
+        background-color: #000;
+    }
+
+    .heading {
+        margin-left: auto;
+        margin-right: auto;
+        color: #FFF;
+    }
+
+    #logo {
+        width: 20%;
     }
 
     .main {
@@ -28,6 +44,10 @@ h1, h2, h3, h4, h5, h6 {
 
     .footer {
         grid-area: footer;
+    }
+
+    #article-pic img {
+        width: 50%;
     }
 }
 
