@@ -25,13 +25,18 @@ h1, h2, h3, h4, h5, h6 {
 
     .header {
         grid-area: header;
+        display: flex;
+        flex-direction: row;
         background-color: #000;
     }
 
-    .heading {
-        margin-left: auto;
-        margin-right: auto;
+    #search {
         color: #FFF;
+    }
+
+    .heading {
+        color: #FFF;
+        text-align: center;
     }
 
     #logo {
@@ -40,6 +45,9 @@ h1, h2, h3, h4, h5, h6 {
 
     .main {
         grid-area: main;
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
     }
 
     .footer {
