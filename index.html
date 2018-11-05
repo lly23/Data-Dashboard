@@ -10,7 +10,8 @@
         <title>Diversity in Tech</title>
 
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/taucharts@2/dist/taucharts.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.1.0/material.min.css">
         <link rel="stylesheet" href="css/styles.css">
 
         <!-- Icons -->
@@ -22,7 +23,7 @@
 
 <body class="grid">
     <div class="header">
-        <div>
+        <div class="heading-icons">
             <i id="search" class="fas fa-search"></i>
         </div>
 
@@ -33,38 +34,61 @@
     </div>
 
     <div class="main">
-        <h1 class="title">Addressing the Gap in Tech</h1>
+        <h1 class="title">Shedding Light on Diversity in Tech</h1>
 
         <div id="article-pic">
             <img src="img/women in tech.jpg" alt="picture of a woman on her laptop">        
         </div>
 
         <div class="headline">
-            <p>The Tech Industry is one of the most hottest fields to be in right now. It's a field that opens doors to many different opportunities pertaining to tech. AI, Software Development, Design, you name there's a job for it. However, most people would generalize a certain demographic to this industry. </p>
-            <div class="author">
+            <p>If you walk into a tech department or industry, chances are you'll see a working environment that mainly consists of males, either White or Asian. Though the biggest tech companies with this certain demographic still flourish in their success, the gap in gender and racial diversity still takes a toll   . There are so many benefits to having people of different color and minds in tech.</p>
+            <div class="author-stamp">
                 <h5>By: Linh Ly</h5>
+                <h6>November 7th, 2018</h6>
             </div>
         </div>
 
         <div class="content">
-            <div class="intro">
-                <h3>Introducing the Gender and Race Distribution</h3>
-                If you walk into a tech department or tech industry, chances are you'll see a working environment that mainly consists of males, either White or Asian. 
+            <div class="section">
+                <h3>The Gender and Racial Gap</h3>
+                <p>Based on the data gathered from <a href="https://informationisbeautiful.net/visualizations/diversity-in-tech/">Information is Beautiful</a> from May 2018, it is evident that there is still some more work that's needed to be done to progress in diversity. Out of the whole U.S. population, 51% of are female and 49% are male. Nonetheless, we can see an unequal distribution in the tech industry in the table below.
+                </p>
             </div>
 
-            <div class="graph">
-                <h3>Let's look at the numbers</h3>
-                <div id="workforce" style="min-width: 310px; height: 500px; margin: 0 auto"></div>
+            <div class="visual">
+                <h5>Let's look at the numbers</h5>
+                <table id="workforce" class="mdl-data-table" style="width: 100%">
+                    <thead>
+                        <tr>
+                            <th>Company</th>
+                            <th>% Female</th>
+                            <th>% Male</th>
+                            <th>% White</th>
+                            <th>% Asian</th>
+                            <th>% Latino</th>
+                            <th>% Black</th>
+                            <th>% Multi-Racial</th>
+                            <th>% Other</th>
+                        </tr>
+                    </thead>
+                </table>
             </div>
             
-            <div class="point">
-                <h3>Success Rates in College</h3>
+            <div class="section">
+                <h3>Diversity Quotas and Fallbacks</h3>
+                    <p>Less Upwards Mobility</p>
+                <h3>Why We Need More Diversity</h3>
+                    <p>Multiple perspectives in solving situations based on upbringings and backgrounds.</p>
             </div>
             
-            <div class="point">
-                <h3>Women and Race: Success Rate in College</h3>
-                <div id="womenSchool" style="min-width: 310px; height: 500px; margin: 0 auto"></div>
-                <div id="womenSchool" style="min-width: 310px; height: 500px; margin: 0 auto"></div>
+            <div class="visual">
+                <h5>Graph</h5>
+                <div id="graphOne" style="min-width: 310px; height: 500px; margin: 0 auto"></div>
+            </div>
+            
+            <div class="visual">
+                <h5>Another Graph</h5>
+                <div id="graphTwo" style="min-width: 310px; height: 500px; margin: 0 auto"></div>
             </div>
 
             <div class="sources">
@@ -89,9 +113,9 @@ crossorigin="anonymous"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="https://code.highcharts.com/modules/export-data.js"></script>
 
-<!-- Tau Charts -->
-<script src="https://cdn.jsdelivr.net/npm/d3@4.13.0/build/d3.min.js" charset="utf-8"></script>
-<script src="https://cdn.jsdelivr.net/npm/taucharts@2/dist/taucharts.min.js" type="text/javascript"></script>
+<!-- Data Tables -->
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/dataTables.material.min.js"></script>
 
 <script src="js/script.js"></script>
 </body>
