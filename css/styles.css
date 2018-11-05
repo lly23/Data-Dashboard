@@ -2,14 +2,29 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-family: Georgia,Times,'Times New Roman',serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: "PostoniWide","Bodoni 72","Bodoni MT","Didot","Didot LT STD","Hoefler Text",Garamond,Georgia,serif;
+}
 
+p {
+    font-size: 18px;
 }
 
 .italics {
     font-style: italic;
+    font-family: Georgia, serif;
+}
+
+.blue {
+    color: #1955a5;
+}
+
+.external-links {
+    color: #2c6cb4;
+    text-decoration: none;
 }
 
 ul {
@@ -18,16 +33,22 @@ ul {
     padding-left: 0;
 }
 
+/* Material Design Overriden Properties */
+.mdl-button--raised.mdl-button--colored {
+    background: #000;
+    color: #fff;
+}
+
 /* supports checks whether the user browswer supports this */
 @supports (grid-area:auto) {
     .grid {
         display: grid;
         grid-template-areas:
-        "header header header"
-        "main main main"
-        "footer footer footer";
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer";
         grid-template-rows: 80px auto auto;
-        grid-template-columns: 15% auto 15%;
+        grid-template-columns: 15% auto auto 15%;
     }
 
     /* Washington Post Heading */
@@ -80,6 +101,10 @@ ul {
         margin-right: auto;
         width: 75%;
         margin-bottom: 8em;
+    }
+
+    .intro {
+        margin-top: 1em;
     }
 
     .title {
