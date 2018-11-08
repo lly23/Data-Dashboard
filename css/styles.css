@@ -2,6 +2,7 @@
 html, body {
     margin: 0;
     padding: 0;
+    background-color: #f7f7f7;
     font-family: Georgia,Times,'Times New Roman',serif;
 }
 
@@ -76,6 +77,15 @@ ul {
     }
 
     .heading-icons {
+        display: flex;
+        color: #FFF;
+        position: absolute;
+        padding: 1em;
+        margin-left: 1em;
+    }
+
+    .heading-icons-mobile {
+        display: none;
         color: #FFF;
         position: absolute;
         padding: 1em;
@@ -90,12 +100,16 @@ ul {
         margin-top: 0.5em;
     }
 
+    .icons:hover {
+        background-color: #000;
+    }
+
     .icons:nth-child(2) {
         margin-left: 1em;
     }
 
-    .icons:hover {
-        background-color: #000;
+    .menu {
+        margin-left: 1em;
     }
 
     .heading {
@@ -199,6 +213,13 @@ ul {
         padding-bottom: 1.5em;
     }
 
+    .footer-icons {
+        background-color: #fff;
+        border-radius: 0.2em;
+        border: 1px solid #d5d5d5;
+        padding: 8px 10px 6px;
+    }
+
     /* Footer Links */
     .footer-links {
         margin-left: auto;
@@ -217,5 +238,51 @@ ul {
 
 
 @media only screen and (max-width: 600px) {
+    .grid {
+        display: grid;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+        grid-template-rows: 80px auto auto;
+        grid-template-columns: 100%;
+    }
 
+    .header {
+        grid-area: header;
+    }
+
+    .heading-icons {
+        display: none;
+    }
+
+    .heading-icons-mobile {
+        display: flex;
+    }
+
+    #logo {
+        width: 40%;
+        padding-top: 1em;
+    }
+
+    #article-pic img {
+        width: 100%;
+        padding-top: 0.5em;
+    }
+
+    .main {
+        grid-area: main;
+    }
+
+    #workforce {
+        width: 100%;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+
+    .footer-top {
+        font-size: 12px;
+    }
 }

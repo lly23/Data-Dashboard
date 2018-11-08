@@ -9,7 +9,6 @@ $(function () {
     var techAsian = [];
     var techHispanic = [];
     var techBlack = [];
-    var totalInField= [];
 
     // AJAX call for breakdown in tech json file
     $.ajax({
@@ -22,7 +21,6 @@ $(function () {
 
             for (var i = 0; i < workData.length; i++) {
                 work_categories.push(workData[i].Industry);
-                totalInField.push(workData[i].Total);
                 techMale.push(workData[i].Male);
                 techFemale.push(workData[i].Female);
                 techWhite.push(workData[i].White);
@@ -48,15 +46,30 @@ $(function () {
                     allowDecimals: false,
                     min: 0,
                     title: {
-                        text: 'Percentage of Employees out of Total Employed within the Industry'
+                        text: '% of Employees out of Total Employed within each Industry'
                     }
                 },
             
                 tooltip: {
                     formatter: function () {
+                        var currentTotal = 0;
+
+                        // change the total amount of employees of each industry when hovering over a certain section
+                        if (this.x == "Professional and Technical Services") {
+                            currentTotal = '11,764';
+                        } else if (this.x == "Architectural, engineering, and related services") {
+                            currentTotal = '1,779';
+                        } else if (this.x == "Computer systems design and related services") {
+                            currentTotal = '3,057';
+                        } else if (this.x == "Management, scientific, and technical consulting services") {
+                            currentTotal = '1,706';
+                        } else if (this.x == "Other profession, scientific, and technical services") {
+                            currentTotal = '497';
+                        }
+
                         return '<b>' + this.x + '</b><br/>' +
-                            this.series.name + ': ' + this.y + '%' + '<br/>' +
-                            'Total: ' + this.point.stackTotal;
+                        this.series.name + ': ' + this.y + '%' + '<br/>' +
+                        'Total Employees in Industry: ' + currentTotal;
                     }
                 },
             
@@ -136,7 +149,7 @@ $(function () {
                 },
             
                 title: {
-                    text: 'Percentage of STEM Employee Responses Why Minorities are Less Seen in the Tech Industry'
+                    text: 'STEM Employee Responses on Why Minorities are Less Seen in the Tech Industry'
                 },
             
                 xAxis: {
@@ -148,7 +161,7 @@ $(function () {
                     min: 0,
                     max: 80,
                     title: {
-                        text: 'Percentage of Employees'
+                        text: '% of Stem Employees who Answered'
                     }
                 },
             
