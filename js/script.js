@@ -1,6 +1,6 @@
 $(function () {
     // Work Distribution Chart
-    var workURL = '/data/json/BreakdownInTech.json';
+    var workURL = '/js/BreakdownInTech.json';
     var workData = [];
     var work_categories = [];
     var techMale = [];
@@ -103,7 +103,7 @@ $(function () {
     
 
     // Reasons for Racial and Gender Gaps Chart
-    var surveyDataURL = '/data/json/GapsPew.json';
+    var surveyDataURL = '/js/GapsPew.json';
     var surveyData = [];
     var responses = [];
     var seriesAsian = [];
@@ -190,7 +190,7 @@ $(function () {
     }); //end of workforce ajax call
 
     //WorkForce Table
-    var workforceURL = '/data/txt/AllPercentages.txt';
+    var workforceURL = '/js/AllPercentages.txt';
 
     $('#workforce').DataTable({
         "ajax": workforceURL,
