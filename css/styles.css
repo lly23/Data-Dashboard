@@ -274,15 +274,34 @@ ul {
         grid-area: main;
     }
 
+    /* Graph Properties Mobile */
     #workforce {
-        width: 100%;
+        min-width: 400px;
+        width: 400px;
+        height: 300px;
     }
 
+    /* Footer Mobile */
     .footer {
         grid-area: footer;
     }
 
+    .footer-links {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+    }
+
+    .footer-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
     .footer-top {
         font-size: 12px;
+    }
+
+    .link-column {
+        flex-basis: 10%;
     }
 }
