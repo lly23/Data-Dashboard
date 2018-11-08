@@ -1,0 +1,58 @@
+[
+  {
+    "Responses": "Less likely to have access to quality education to prepare them for these fields",
+    "White": 50,
+    "Asian": 52,
+    "Hispanic": 53,
+    "Black": 73,
+    "US Adults": 42
+  },
+  {
+    "Responses": "Face discrimination in recruitment, hiring and promotions",
+    "White": 27,
+    "Asian": 28,
+    "Hispanic": 43,
+    "Black": 72,
+    "US Adults": 31
+  },
+  {
+    "Responses": "Not encouraged to pursue these subjects from an early age",
+    "White": 44,
+    "Asian": 40,
+    "Hispanic": 50,
+    "Black": 67,
+    "US Adults": 41
+  },
+  {
+    "Responses": "Less likely to think they would succeed in these fields",
+    "White": 34,
+    "Asian": 28,
+    "Hispanic": 35,
+    "Black": 44,
+    "US Adults": 33
+  },
+  {
+    "Responses": "Lack of black and Hispanic role models in these fields",
+    "White": 31,
+    "Asian": 32,
+    "Hispanic": 39,
+    "Black": 42,
+    "US Adults": 27
+  },
+  {
+    "Responses": "More are being trained in these fields, but the process is slow",
+    "White": 22,
+    "Asian": 29,
+    "Hispanic": 30,
+    "Black": 37,
+    "US Adults": 22
+  },
+  {
+    "Responses": "Less Interested in STEM fields than others",
+    "White": 19,
+    "Asian": 30,
+    "Hispanic": 18,
+    "Black": 14,
+    "US Adults": 22
+  }
+]

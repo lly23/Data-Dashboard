@@ -1,0 +1,52 @@
+[
+  {
+    "Industry": "Professional and Technical Services",
+    "Total Employed": "18,835",
+    "Female": 42.2,
+    "Male": 57.8,
+    "White": 78.5,
+    "Black": 10,
+    "Asian": 8.3,
+    "Hispanic": 16.3
+  },
+  {
+    "Industry": "Architectural, engineering, and related services",
+    "Total Employed": "1,706",
+    "Female": 42.5,
+    "Male": 57.5,
+    "White": 80.7,
+    "Black": 7.4,
+    "Asian": 9.7,
+    "Hispanic": 8
+  },
+  {
+    "Industry": "Computer systems design and related services",
+    "Total Employed": "3,057",
+    "Female": 27.4,
+    "Male": 72.6,
+    "White": 68.5,
+    "Black": 7.3,
+    "Asian": 21.4,
+    "Hispanic": 7.1
+  },
+  {
+    "Industry": "Management, scientific, and technical consulting services",
+    "Total Employed": "1,706",
+    "Female": 42.5,
+    "Male": 57.5,
+    "White": 80.7,
+    "Black": 7.4,
+    "Asian": 9.7,
+    "Hispanic": 8
+  },
+  {
+    "Industry": "Other profession, scientific, and technical services",
+    "Total Employed": 497,
+    "Female": 55.5,
+    "Male": 44.5,
+    "White": 82.1,
+    "Black": 7.3,
+    "Asian": 6.7,
+    "Hispanic": 13.6
+  }
+]
