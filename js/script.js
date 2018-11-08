@@ -1,57 +1,106 @@
 $(function () {
-    // Pie Chart
-    var pieChartURL = '/data/json/BreakdownInTech.json';
-    var pieChartData = [];
+    // Work Distribution Chart
+    var workURL = '/data/json/BreakdownInTech.json';
+    var workData = [];
+    var work_categories = [];
+    var techMale = [];
+    var techFemale = [];
+    var techWhite = [];
+    var techAsian = [];
+    var techHispanic = [];
+    var techBlack = [];
+    var totalInField= [];
 
-    Highcharts.chart('graphOne', {
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            type: 'pie'
-        },
-        title: {
-            text: 'Browser market shares in January, 2018'
-        },
-        tooltip: {
-            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: false
-                },
-                showInLegend: true
+    // AJAX call for breakdown in tech json file
+    $.ajax({
+        type: 'GET',
+        dataType: 'json',
+        data: workData,
+        url: workURL,
+        async: true,
+        success: function(workData) {
+
+            for (var i = 0; i < workData.length; i++) {
+                work_categories.push(workData[i].Industry);
+                totalInField.push(workData[i].Total);
+                techMale.push(workData[i].Male);
+                techFemale.push(workData[i].Female);
+                techWhite.push(workData[i].White);
+                techAsian.push(workData[i].Asian);
+                techHispanic.push(workData[i].Hispanic);
+                techBlack.push(workData[i].Black);
             }
-        },
-        series: [{
-            name: 'Brands',
-            colorByPoint: true,
-            data: [{
-                name: 'Chrome',
-                y: 61.41,
-                sliced: true,
-                selected: true
-            }, {
-                name: 'Internet Explorer',
-                y: 11.84
-            }, {
-                name: 'Firefox',
-                y: 10.85
-            }, {
-                name: 'Edge',
-                y: 4.67
-            }, {
-                name: 'Safari',
-                y: 4.18
-            }, {
-                name: 'Other',
-                y: 7.05
-            }]
-        }]
-    });
+
+            Highcharts.chart('graphOne', {
+                chart: {
+                    type: 'column'
+                },
+            
+                title: {
+                    text: 'Percentage of Women, Men, and Race in the Tech Field'
+                },
+            
+                xAxis: {
+                    categories: work_categories
+                },
+            
+                yAxis: {
+                    allowDecimals: false,
+                    min: 0,
+                    title: {
+                        text: 'Number of fruits'
+                    }
+                },
+            
+                tooltip: {
+                    formatter: function () {
+                        return '<b>' + this.x + '</b><br/>' +
+                            this.series.name + ': ' + this.y + '%' + '<br/>' +
+                            'Total: ' + this.point.stackTotal;
+                    }
+                },
+            
+                plotOptions: {
+                    column: {
+                        stacking: 'normal'
+                    }
+                },
+            
+                series: [{
+                    name: 'Male',
+                    data: techMale,
+                    stack: 'gender',
+                    color: '#000000'
+                }, {
+                    name: 'Female',
+                    data: techFemale,
+                    stack: 'gender',
+                    color: '#A8A8A8'
+                }, {
+                    name: 'White',
+                    data: techWhite,
+                    stack: 'race',
+                    color: '#007BA3'
+                }, {
+                    name: 'Asian',
+                    data: techAsian,
+                    stack: 'race',
+                    color: '#C0E8F2'
+                }, {
+                    name: 'Hispanic',
+                    data: techHispanic,
+                    stack: 'race',
+                    color: '#89CCFF'
+                }, {
+                    name: 'Black',
+                    data: techBlack,
+                    stack: 'race',
+                    color: '#5AAABE'
+                }]
+            });
+        } // end of success function
+    }); // end of breakdown in tech ajax call
+    
 
     // Reasons for Racial and Gender Gaps Chart
     var surveyDataURL = '/data/json/GapsPew.json';
@@ -87,7 +136,7 @@ $(function () {
                 },
             
                 title: {
-                    text: 'Responses to the Racial Gaps among STEM employees'
+                    text: 'Reasons STEM employees suggest that lead to the Racial Gaps'
                 },
             
                 xAxis: {
@@ -97,7 +146,7 @@ $(function () {
                 yAxis: {
                     allowDecimals: false,
                     min: 0,
-                    max: 100,
+                    max: 80,
                     title: {
                         text: 'Percentage of Employees'
                     }
