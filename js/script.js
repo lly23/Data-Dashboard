@@ -136,7 +136,7 @@ $(function () {
                 },
             
                 title: {
-                    text: 'STEM employees of Different Race Who Think that Certain Reasons are Why Diversity is Lacking'
+                    text: 'Percentage of STEM Employee Responses Why Minorities are Less Seen in the Tech Industry'
                 },
             
                 xAxis: {
