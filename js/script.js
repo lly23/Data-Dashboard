@@ -48,7 +48,7 @@ $(function () {
                     allowDecimals: false,
                     min: 0,
                     title: {
-                        text: 'Number of fruits'
+                        text: 'Percentage of Employees out of Total Employed within the Industry'
                     }
                 },
             
