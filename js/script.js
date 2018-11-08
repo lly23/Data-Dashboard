@@ -1,6 +1,6 @@
 $(function () {
     // Work Distribution Chart
-    var workURL = '/js/BreakdownInTech.json';
+    var workURL = 'BreakdownInTech.json';
     var workData = [];
     var work_categories = [];
     var techMale = [];
@@ -37,7 +37,7 @@ $(function () {
                 },
             
                 title: {
-                    text: 'Percentage of Women, Men, and Race in the Tech Field'
+                    text: 'Percentage of Women, Men, and Racial Groups in the Tech Field',
                 },
             
                 xAxis: {
@@ -103,7 +103,7 @@ $(function () {
     
 
     // Reasons for Racial and Gender Gaps Chart
-    var surveyDataURL = '/js/GapsPew.json';
+    var surveyDataURL = 'GapsPew.json';
     var surveyData = [];
     var responses = [];
     var seriesAsian = [];
@@ -111,7 +111,7 @@ $(function () {
     var seriesHispanic = [];
     var seriesWhite = [];
 
-    // First AJAX call for workforce data
+    // AJAX call for workforce data
     $.ajax({
         type: 'GET',
         dataType: 'json',
@@ -136,7 +136,7 @@ $(function () {
                 },
             
                 title: {
-                    text: 'Reasons STEM employees suggest that lead to the Racial Gaps'
+                    text: 'STEM employees of Different Race Who Think that Certain Reasons are Why Diversity is Lacking'
                 },
             
                 xAxis: {
@@ -190,7 +190,7 @@ $(function () {
     }); //end of workforce ajax call
 
     //WorkForce Table
-    var workforceURL = '/js/AllPercentages.txt';
+    var workforceURL = 'AllPercentages.txt';
 
     $('#workforce').DataTable({
         "ajax": workforceURL,
@@ -210,6 +210,6 @@ $(function () {
             targets: [ 0, 1, 2 ],
             className: 'mdl-data-table__cell--non-numeric'
         }] //close columnDefs
-    });
+    }); // close DataTable
     
 });
